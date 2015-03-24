@@ -1,6 +1,6 @@
 # CurrencyFairWizard
 
-*This project was challenging, fun and very educational. Thank you for this opportnity, and any productive feedback would be appreciated. Please read on:
+*This project was challenging, fun and very educational. Thank you for this opportunity, and any productive feedback would be appreciated. Please read on:
 
 -----Notes on the Stack Architecture and Implementation-----
 

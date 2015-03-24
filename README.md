@@ -7,7 +7,8 @@ Transaction Message Endpoint POST:
 	http://skybabble.com:8080/proxy/message
 
 examle cURL:
-	curl --data "{"originatingCountry":"JP","rate":0.7471,"currencyFrom":"EUR","ammountSell":1000,"ammountBuy":747,"currencyTo":"GBP","userId":"134256","timePlaced":1422113264000}" skybabble.com:8080/proxy/message
+
+curl -H "Content-Type: application/json" -d '{"userId":"212121","currencyFrom":"EUR","currencyTo":"GBP","amountSell":1000,"amountBuy":747.1,"rate":0.7471,"timePlaced":"24-JAN-15 10:27:44","originatingCountry":"FR"}' http://skybabble.com:8080/proxy/message
 
 Front End URL:
 	http://skybabble.com/angular.example/CurrencyFair_UI/#/

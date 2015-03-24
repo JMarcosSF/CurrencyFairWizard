@@ -87,22 +87,22 @@ public class WizardResource {
 	protected JSONArray countAllCountryMessages() {
 		JSONObject curr;
 		JSONArray metricArray = new JSONArray();
-		JSONObject metricObject;
+		JSONArray metricArrayEl;
 		try {
 			JSONArray countryList = new JSONArray(WizardConfiguration.countryArrayString);
 			curr = new JSONObject();
 			int count = 0;
 			String countryName;
 			for(int i = 0; i < countryList.length(); i++) {
-				metricObject = new JSONObject();
+				metricArrayEl = new JSONArray();
 				curr = countryList.getJSONObject(i);
 				countryName = curr.getString("name");
 				count = messageDaoImpl.getAllMessagesByOriginatingCountry(curr.getString("code")).size();
 				
-				metricObject.put("countryName", countryName);
-				metricObject.put("messageCount", count);
+				metricArrayEl.put(countryName);
+				metricArrayEl.put(count);
 				
-				metricArray.put(metricObject);
+				metricArray.put(metricArrayEl);
 			}
 			return metricArray;
 		} catch (JSONException e) {

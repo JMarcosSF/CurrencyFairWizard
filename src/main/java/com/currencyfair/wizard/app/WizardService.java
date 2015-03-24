@@ -1,5 +1,7 @@
 package com.currencyfair.wizard.app;
 
+import org.eclipse.jetty.servlets.CrossOriginFilter;
+
 import net.vz.mongodb.jackson.JacksonDBCollection;
 
 import com.currencyfair.wizard.app.configuration.WizardConfiguration;
@@ -57,6 +59,10 @@ public class WizardService extends Service<WizardConfiguration>{
 		environment.addHealthCheck(new MongoHealthCheck(mongo)); 
 		environment.addResource(new WizardResource());
 		environment.addResource(new ProxyResource());
+		environment.addFilter(CrossOriginFilter.class, "/*")
+		.setInitParam("allowedOrigins", "*")
+		.setInitParam("allowedHeaders", "X-Requested-With,Content-Type,Accept,Origin")
+		.setInitParam("allowedMethods", "OPTIONS,GET,PUT,POST,DELETE,HEAD");
 
 	}
 

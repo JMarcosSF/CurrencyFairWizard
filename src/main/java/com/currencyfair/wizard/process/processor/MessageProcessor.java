@@ -28,7 +28,7 @@ import com.rabbitmq.client.ShutdownSignalException;
 public class MessageProcessor {
 
 	// For demonstration purposes, rate is "5000 permits per second"
-	protected final RateLimiter rateLimiter = RateLimiter.create(5000.0);
+	protected final RateLimiter rateLimiter = RateLimiter.create(10.0);
 	private final static String QUEUE_NAME = "currencyfair_wizardQ";
 
 	private ConnectionFactory factory;
@@ -85,6 +85,7 @@ public class MessageProcessor {
 //		Format: 24-JAN-15 10:27:44 
 		SimpleDateFormat formatter = new SimpleDateFormat("dd-MMM-yy HH:mm:ss");
 		Date date;
+		boolean isValid = false;
 		try {
 			json = new JSONObject(message);
 			date = formatter.parse(json.getString("timePlaced"));
@@ -97,6 +98,7 @@ public class MessageProcessor {
 			msg.setRate(json.getDouble("rate"));
 			msg.setTimePlaced(date);
 			msg.setOriginatingCountry(json.getString("originatingCountry"));
+			isValid = true;
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -105,15 +107,17 @@ public class MessageProcessor {
 			e.printStackTrace();
 		}
 
-		try {
-			mongo = new Mongo(conf.mongohost, conf.mongoport);
-			DB db = mongo.getDB(conf.mongodb);
-			JacksonDBCollection<Message, String> messages =
-					JacksonDBCollection.wrap(db.getCollection("messages"), Message.class, String.class);
-			WriteResult<Message, String> result = messages.insert(msg);
-		} catch (UnknownHostException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		if(isValid) {			
+			try {
+				mongo = new Mongo(conf.mongohost, conf.mongoport);
+				DB db = mongo.getDB(conf.mongodb);
+				JacksonDBCollection<Message, String> messages =
+						JacksonDBCollection.wrap(db.getCollection("messages"), Message.class, String.class);
+				WriteResult<Message, String> result = messages.insert(msg);
+			} catch (UnknownHostException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		
 	}

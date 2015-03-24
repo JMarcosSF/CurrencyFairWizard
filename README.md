@@ -2,6 +2,22 @@
 
 *This project was challenging, fun and very educational. Thank you for this opportunity, and any productive feedback would be appreciated. Please read on:
 
+-----SUBMISSION NOTES-----
+Transaction Message Endpoint POST: 
+	http://skybabble.com:8080/proxy/message
+
+examle cURL:
+	curl --data "{"originatingCountry":"JP","rate":0.7471,"currencyFrom":"EUR","ammountSell":1000,"ammountBuy":747,"currencyTo":"GBP","userId":"134256","timePlaced":1422113264000}" skybabble.com:8080/proxy/message
+
+Front End URL:
+	http://skybabble.com/angular.example/CurrencyFair_UI/#/
+
+Public GitHub Repo (2 projects):
+	Server-Side:
+		https://github.com/JMarcosSF/CurrencyFairWizard.git
+	Client-Side:
+		https://github.com/JMarcosSF/CurrencyFair_UI.git
+
 -----Notes on the Stack Architecture and Implementation-----
 
 I decided to use the DropWizard Framework because the Java Stack was already

@@ -1,4 +1,4 @@
-package com.currencyfair.wizard.app;
+package com.skybabble.wizard.app;
 
 import com.mongodb.Mongo;
 import com.yammer.metrics.core.HealthCheck;

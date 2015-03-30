@@ -1,4 +1,4 @@
-package com.currencyfair.wizard.app.model;
+package com.skybabble.wizard.app.model;
 
 import java.util.Date;
 

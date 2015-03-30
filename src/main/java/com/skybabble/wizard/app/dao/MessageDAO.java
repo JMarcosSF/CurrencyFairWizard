@@ -1,10 +1,10 @@
-package com.currencyfair.wizard.app.dao;
+package com.skybabble.wizard.app.dao;
 
 import java.util.List;
 
 import org.json.JSONObject;
 
-import com.currencyfair.wizard.app.model.Message;
+import com.skybabble.wizard.app.model.Message;
 
 public interface MessageDAO {
 	

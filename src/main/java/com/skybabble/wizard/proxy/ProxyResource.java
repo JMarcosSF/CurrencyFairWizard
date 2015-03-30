@@ -1,4 +1,4 @@
-package com.currencyfair.wizard.proxy;
+package com.skybabble.wizard.proxy;
 
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -9,7 +9,7 @@ import javax.ws.rs.core.Response;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.currencyfair.wizard.process.ProcessorImpl;
+import com.skybabble.wizard.process.ProcessorImpl;
 /**
  * This class would normally be it's own Stand Alone component within the
  * stack. For the sake of simplicity and for this test run project, I

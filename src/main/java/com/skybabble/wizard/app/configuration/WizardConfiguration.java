@@ -1,4 +1,4 @@
-package com.currencyfair.wizard.app.configuration;
+package com.skybabble.wizard.app.configuration;
 
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;

@@ -1,4 +1,4 @@
-package com.currencyfair.wizard.process.processor;
+package com.skybabble.wizard.process.processor;
 
 import java.io.IOException;
 import java.net.UnknownHostException;
@@ -13,8 +13,6 @@ import net.vz.mongodb.jackson.WriteResult;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.currencyfair.wizard.app.configuration.WizardConfiguration;
-import com.currencyfair.wizard.app.model.Message;
 import com.google.common.util.concurrent.RateLimiter;
 import com.mongodb.DB;
 import com.mongodb.Mongo;
@@ -24,6 +22,8 @@ import com.rabbitmq.client.ConnectionFactory;
 import com.rabbitmq.client.ConsumerCancelledException;
 import com.rabbitmq.client.QueueingConsumer;
 import com.rabbitmq.client.ShutdownSignalException;
+import com.skybabble.wizard.app.configuration.WizardConfiguration;
+import com.skybabble.wizard.app.model.Message;
 
 public class MessageProcessor {
 

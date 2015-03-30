@@ -1,13 +1,13 @@
-package com.currencyfair.wizard.app.resource;
+package com.skybabble.wizard.app.resource;
 
-import com.currencyfair.wizard.app.configuration.WizardConfiguration;
-import com.currencyfair.wizard.app.dao.MessageDAOImpl;
-import com.currencyfair.wizard.app.model.Message;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 import com.fasterxml.jackson.databind.jsonFormatVisitors.JsonObjectFormatVisitor;
 import com.google.common.base.Optional;
+import com.skybabble.wizard.app.configuration.WizardConfiguration;
+import com.skybabble.wizard.app.dao.MessageDAOImpl;
+import com.skybabble.wizard.app.model.Message;
 import com.yammer.dropwizard.assets.ResourceNotFoundException;
 import com.yammer.metrics.annotation.Timed;
 

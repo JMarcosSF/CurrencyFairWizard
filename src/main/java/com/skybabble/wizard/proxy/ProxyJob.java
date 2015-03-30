@@ -1,11 +1,11 @@
-package com.currencyfair.wizard.proxy;
+package com.skybabble.wizard.proxy;
 
 import java.io.IOException;
 
-import com.currencyfair.wizard.app.model.Message;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
+import com.skybabble.wizard.app.model.Message;
 
 /**
  * A Class which creates a runnable object

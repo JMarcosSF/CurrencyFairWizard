@@ -1,4 +1,4 @@
-package com.currencyfair.wizard.process;
+package com.skybabble.wizard.process;
 
 import com.google.common.util.concurrent.RateLimiter;
 

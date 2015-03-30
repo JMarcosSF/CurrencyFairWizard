@@ -1,17 +1,17 @@
-package com.currencyfair.wizard.app;
+package com.skybabble.wizard.app;
 
 import org.eclipse.jetty.servlets.CrossOriginFilter;
 
 import net.vz.mongodb.jackson.JacksonDBCollection;
 
-import com.currencyfair.wizard.app.configuration.WizardConfiguration;
-import com.currencyfair.wizard.app.model.Message;
-import com.currencyfair.wizard.app.resource.WizardResource;
-import com.currencyfair.wizard.process.*;
-import com.currencyfair.wizard.process.processor.MessageProcessor;
-import com.currencyfair.wizard.proxy.ProxyResource;
 import com.mongodb.DB;
 import com.mongodb.Mongo;
+import com.skybabble.wizard.app.configuration.WizardConfiguration;
+import com.skybabble.wizard.app.model.Message;
+import com.skybabble.wizard.app.resource.WizardResource;
+import com.skybabble.wizard.process.*;
+import com.skybabble.wizard.process.processor.MessageProcessor;
+import com.skybabble.wizard.proxy.ProxyResource;
 import com.yammer.dropwizard.Service;
 import com.yammer.dropwizard.config.Bootstrap;
 import com.yammer.dropwizard.config.Environment;

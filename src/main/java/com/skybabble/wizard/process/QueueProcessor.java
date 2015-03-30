@@ -20,7 +20,7 @@ public interface QueueProcessor extends Runnable {
 	 * Thread-safe method is called at start of application and listens for
 	 * any incoming Message processing jobs to insert to MongoDB.
 	 * (non-Javadoc)
-	 * @see com.currencyfair.wizard.rabbitmq.proxy.job.Processor#process(java.lang.Runnable)
+	 * @see com.skybabble.wizard.rabbitmq.proxy.job.Processor#process(java.lang.Runnable)
 	 */
     public void process(Runnable runJob);
     

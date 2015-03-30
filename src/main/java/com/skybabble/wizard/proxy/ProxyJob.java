@@ -14,7 +14,7 @@ import com.skybabble.wizard.app.model.Message;
  */
 public class ProxyJob implements Runnable {
 
-	private final static String QUEUE_NAME = "currencyfair_wizardQ";
+	private final static String QUEUE_NAME = "skybabble_wizardQ";
 	private String message;
 	
 	public ProxyJob(String message) {

@@ -29,7 +29,7 @@ public class MessageProcessor {
 
 	// For demonstration purposes, rate is "5000 permits per second"
 	protected final RateLimiter rateLimiter = RateLimiter.create(10.0);
-	private final static String QUEUE_NAME = "currencyfair_wizardQ";
+	private final static String QUEUE_NAME = "skybabble_wizardQ";
 
 	private ConnectionFactory factory;
 	private Connection connection;

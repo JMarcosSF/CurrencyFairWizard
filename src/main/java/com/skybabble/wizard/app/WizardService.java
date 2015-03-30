@@ -41,7 +41,7 @@ public class WizardService extends Service<WizardConfiguration>{
 
 	@Override
 	public void initialize(Bootstrap<WizardConfiguration> bootstrap) {
-		bootstrap.setName("currencyfair_wizard");
+		bootstrap.setName("skybabble_wizard");
 	}
 
 	@Override

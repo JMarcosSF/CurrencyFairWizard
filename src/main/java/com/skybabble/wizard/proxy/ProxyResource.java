@@ -23,7 +23,7 @@ import com.skybabble.wizard.process.ProcessorImpl;
  * does no further processing, then sends the String to RabbitMQ.
  * 
  * Although this is meant to be in it's own project, it still shares common classes
- * with the CurrencyFairWizard app.
+ * with the SkyBabbleWizard app.
  * 
  * @author JMarcos
  *

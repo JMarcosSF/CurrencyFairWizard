@@ -1,7 +1,5 @@
 # SkyBabbleWizard
 
-*This project was challenging, fun and very educational. Thank you for this opportunity, and any productive feedback would be appreciated. Please read on:
-
 -----SUBMISSION NOTES-----
 Transaction Message Endpoint POST: 
 	http://skybabble.com:8080/proxy/message

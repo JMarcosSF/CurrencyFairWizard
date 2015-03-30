@@ -1,10 +1,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.currencyfair.wizard</groupId>
-	<artifactId>CurrencyFairWizard</artifactId>
+	<groupId>com.skybabble.wizard</groupId>
+	<artifactId>SkyBabbleWizard</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>CurrencyFairWizard</name>
+	<name>SkyBabbleWizard</name>
 	<description>RabbitMQ Proxy and RESTful Webservice.</description>
 	<properties>
 		<dropwizard.version>0.6.2</dropwizard.version>
@@ -87,7 +87,7 @@
 									implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer" />
 								<transformer
 									implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-									<mainClass>com.currencyfair.wizard.app.WizardService</mainClass>
+									<mainClass>com.skybabble.wizard.app.WizardService</mainClass>
 								</transformer>
 							</transformers>
 						</configuration>
